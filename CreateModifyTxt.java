@@ -19,7 +19,7 @@ public class CreateModifyTxt{
 		try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(name + ".txt"), StandardCharsets.UTF_8))) {
 			System.out.println("Topic?");
 			String topic = inputword();
-		    writer.write("${bold}" + topic + "${normal}");
+		    writer.write("${bold}\t" + topic + "${normal}");
 		    System.out.println("begin writing bullet points, press enter to start a new bullet");
 		    String bullet = inputWords();
 		    writer.write("\n");
