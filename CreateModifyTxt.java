@@ -9,7 +9,8 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 public class CreateModifyTxt{
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
+		List<String> bulletnotes = new ArrayList<String>();
 		List<KeyTermsOBJ> terms = new ArrayList<KeyTermsOBJ>();
 		System.out.println("File Name?");
 		String name = inputword();
@@ -22,13 +23,17 @@ public class CreateModifyTxt{
 		    writer.write("\n");
 		    while(!bullet.equals("end doc")){
 		    	 bullet = inputWords();
-		    	 if(!bullet.equals("end doc"))
-		    	 writer.write("-" + bullet + "\n");
+		    	 if(!bullet.equals("end doc")){
+		    		 writer.write("-" + bullet + "\n");
+		    		 bulletnotes.add("-" + bullet);
+		    	 }
+		    	
 		    }
 		 System.out.println("Key Terms?(yes or no)");
 		 String ans = inputword();
 		 String term = "";
 		 if(ans.toLowerCase().charAt(0)=='y'){
+			 writer.write("\t\t\t\tkeyterms");
 			  while(!term.equals("end doc")){
 				  	 System.out.println("term?");
 			    	 term = inputWords();
@@ -47,7 +52,7 @@ public class CreateModifyTxt{
 		 
 		} 
 		catch (IOException ex) {
-		    // handle me
+		   
 		} 
 
 	
