@@ -31,9 +31,9 @@ public class CreateModifyTxt{
 		 if(ans.toLowerCase().charAt(0)=='y'){
 			  while(!term.equals("end doc")){
 				  	 System.out.println("term?");
-			    	 term = inputword();
+			    	 term = inputWords();
 			    	 if(!term.equals("end doc")){
-			    	 System.out.println("term?");
+			    	 System.out.println("definition?");
 			    	 String def = inputWords();
 			    	 KeyTermsOBJ k = new KeyTermsOBJ(term, def);
 			    	 terms.add(k);
