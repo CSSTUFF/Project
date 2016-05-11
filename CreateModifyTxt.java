@@ -1,6 +1,5 @@
 
 import java.util.*;
-import java.util.Date;
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -9,12 +8,14 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 public class CreateModifyTxt{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
+		Date d = new Date();
 		List<String> bulletnotes = new ArrayList<String>();
 		List<KeyTermsOBJ> terms = new ArrayList<KeyTermsOBJ>();
 		System.out.println("File Name?");
 		String name = inputword();
 		try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(name + ".txt"), StandardCharsets.UTF_8))) {
+			writer.write((d.getMonth() +1 )  + "/" + d.getDate() + "/" + (d.getYear()%100)  + "\n");
 			System.out.println("Topic?");
 			String topic = inputword();
 		    writer.write("\t\t\t\t" + topic);
