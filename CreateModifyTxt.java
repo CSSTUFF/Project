@@ -7,6 +7,19 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 public class CreateModifyTxt{
+	/*
+	This is going to be an explanation on the classes I imported from the Java.io package in order to make the Notes Class.
+	For clarification, this class is meant to create a new text file, or overwrite an existing file.
+	The classes and exceptions used from are mainly taken from the java.io class.
+	The main line that utilizes these classes and enables the user to write on a text doc is:
+	Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(name + ".txt"), StandardCharsets.UTF_8)
+	to explain how this is used, I will work backwards
+	StandardCharsets is essentially like the language for the the text file, as the text file does not accept the output used on the java console
+	FileOutputStream is the path to the file, can be described as the bridge to the new file
+	OutputStreamWriter is like the road the text follows to get to the text file
+	BufferedWriter is a bit different, it is like the translator. It essentially translates from java output, to the StandardCharsets
+	Writer class is the final step to executing the writing of a single line of text into the txt file.
+	*/
 
 	public static void main(String[] args) { 
 		System.out.println("What do you want to name your File Name to be?");
