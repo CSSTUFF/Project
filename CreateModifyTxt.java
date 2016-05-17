@@ -1,12 +1,15 @@
 
 import java.util.*;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
-public class CreateModifyTxt{
+public class CreateModifyTxt  extends MakeSound{
+
+	
 	/*
 	This is going to be an explanation on the classes I imported from the Java.io package in order to make the Notes Class.
 	For clarification, this class is meant to create a new text file, or overwrite an existing file.
@@ -19,11 +22,20 @@ public class CreateModifyTxt{
 	OutputStreamWriter is like the road the text follows to get to the text file
 	BufferedWriter is a bit different, it is like the translator. It essentially translates from java output, to the StandardCharsets
 	Writer class is the final step to executing the writing of a single line of text into the txt file.
+	
+	the try/catch function is used in this class in order to prevent the user
 	*/
-
-	public static void main(String[] args) { 
+	
+	
+	public static void intro() { 
 		System.out.println("What do you want to name your File Name to be?");
 		String name = inputWord();
+		File file = new File(name);
+		if(file.exists()){
+			System.out.println("A File with that name already exists, please choose a different name");
+			intro();
+		}
+			
 		ArrayList<String> empty= new ArrayList<String>();
 		addToDoc(name, empty);
 	
@@ -50,9 +62,13 @@ public class CreateModifyTxt{
 		    writer.write("\n");
 		    while(!bullet.equals("end doc")){
 		    	 bullet = inputWords();
+		    	 if(bullet.equals("need_inspiration"))
+		    		 playSound("Bob The Builder Theme Song.wav");
+		    	 else{
 		    	 if(!bullet.equals("end doc")){
 		    		 writer.write("-" + bullet + "\n");
 		    		 bulletnotes.add("-" + bullet);
+		    	 }
 		    	 }
 		    	
 		    }
@@ -64,13 +80,17 @@ public class CreateModifyTxt{
 			  while(!term.equals("end doc")){
 				  	 System.out.println("term?");
 			    	 term = inputWords();
+			    	 if(bullet.equals("need_inspiration"))
+			    		 playSound("Bob The Builder Theme Song.wav");
+			    	 else{
 			    	 if(!term.equals("end doc")){
 			    	 System.out.println("definition?");
 			    	 String def = inputWords();
 			    	 KeyTermsOBJ k = new KeyTermsOBJ(term, def);
 			    	 terms.add(k);
 			    	}
-			    } 
+			    }
+			 } 
 			  writer.write("\n");
 			  for(KeyTermsOBJ k: terms){
 				  writer.write(k.getTerm() + " --> " + k.getDef() + "\n");
