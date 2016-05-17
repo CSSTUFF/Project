@@ -36,6 +36,7 @@ public class NoteBook extends CreateModifyTxt {
 	}
 		catch(FileNotFoundException ex){
 			System.out.println("There are no files under that name");
+			readAdd();
 		}
 	
 
