@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+
 public class Subjects{
 	public static void main(String[] args) {
 		String[] subjects={"implementation","data structures",
@@ -14,8 +16,16 @@ public class Subjects{
 				+ "Operations and Algorithms, or Program Analysis");
 			String topic=con.next();
 			chooser(topic,subjects);
-		}else{
-			game.ReviewGame();
+		}
+		else{
+			String gameType=game.intro();
+			if(gameType.contains("multiple choice")){
+				System.out.println("Your score is: "+game.multiplechoice(con));
+			}else if(gameType.contains("short answer")){
+				System.out.println("Your score is: "+game.shortanswer(con));
+			}else{
+				System.out.println("Your score is: "+game.guessing(con));
+			}
 		}
 	}
 	public static void chooser(String selection, String[] subjects){
@@ -31,7 +41,8 @@ public class Subjects{
 			choice= con.nextLine().toLowerCase();
 			if(choice.equals("concepts")==true){
 				implementation.keyConcepts();
-			}else{
+			}
+			else{
 				implementation.keyTerms();
 			}
 		}else if(subjects[1].contains(selection)){
@@ -39,7 +50,8 @@ public class Subjects{
 			choice= con.nextLine().toLowerCase();
 			if(choice.equals("concepts")==true){
 				data_structures.keyConcepts();
-			}else{
+			}
+			else{
 				data_structures.keyTerms();
 			}
 		}else if(subjects[2].contains(selection)){
@@ -47,7 +59,8 @@ public class Subjects{
 			choice= con.nextLine().toLowerCase();
 			if(choice.equals("concepts")==true){
 				operations_and_algorithms.keyConcepts();
-			}else{
+			}
+			else{
 				operations_and_algorithms.keyTerms();
 			}
 		}else if(subjects[3].contains(selection)){
@@ -55,7 +68,8 @@ public class Subjects{
 			choice= con.nextLine().toLowerCase();
 			if(choice.equals("concepts")==true){
 				program_analysis.keyConcepts();
-			}else{
+			}
+			else{
 				program_analysis.keyTerms();
 			}
 		}else{
