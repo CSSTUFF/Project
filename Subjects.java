@@ -1,6 +1,4 @@
 import java.util.Scanner;
-
-
 public class Subjects{
 	public static void main(String[] args) {
 		String[] subjects={"implementation","data structures",
