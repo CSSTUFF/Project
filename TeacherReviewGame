@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.IOException;
-public class ReviewGame{
+public class TeacherReviewGame{
 	//Takes user to a practice site to practice multiple choice questions, 
 	//or go to google with a searched for practice problems where they can use a 
 	//different site too
