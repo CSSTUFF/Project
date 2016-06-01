@@ -1,24 +1,15 @@
 import java.util.*;
 public class Implementation{
-
-	public static void main(String[] args) {
-		Scanner con= new Scanner(System.in);
-		System.out.print("Would you like to see the concepts or the keyterms of this topic?");
-		String choice= con.nextLine();
-		if(choice.equals("concepts")==true){
-			keyConcepts();
-		}
-		else{
-			keyTerms();
-		}	}
-	public static void keyConcepts(){
+	//the "teacher made" key concepts of this java topic
+	public void keyConcepts(){
 		System.out.println("Concepts: ");
 		System.out.println("~ Programming constructs");
 		System.out.println("~ Declaration");
 		System.out.println("~ Printing outputs");
 		System.out.println("~ Expressions");
 	}
-	public static void keyTerms(){
+	//the "teacher made" key terms of this java topic
+	public void keyTerms(){
 		System.out.println("Terms:");
 		System.out.print("~ Object-oriented:  ");
 		System.out.println("a programing language that uses methodology enabling"
@@ -67,5 +58,4 @@ public class Implementation{
 		System.out.println("~ Numeric Expressions:  an expression using numbers");
 		System.out.println("~ Expression Evaluation:  a specific expression in italics");
 	}
-	public Object[] subjects;
 }
