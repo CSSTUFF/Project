@@ -1,6 +1,9 @@
+import java.io.IOException;
 import java.util.Scanner;
+
+
 public class Subjects{
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		String[] subjects={"implementation","data structures",
 			"operations and algorithms","program analysis"};
 		ReviewGame game=new ReviewGame();
@@ -16,14 +19,12 @@ public class Subjects{
 			chooser(topic,subjects);
 		}
 		else{
-			String gameType=game.intro();
-			if(gameType.contains("multiple choice")){
-				System.out.println("Your score is: "+game.multiplechoice(con));
-			}else if(gameType.contains("short answer")){
+			int gameType=game.intro();
+			if(gameType==0){
+				/*System.out.println("Your score is: "+*/game.multiplechoice(con)/*)*/;
+			}/*else{
 				System.out.println("Your score is: "+game.shortanswer(con));
-			}else{
-				System.out.println("Your score is: "+game.guessing(con));
-			}
+			}*/
 		}
 	}
 	public static void chooser(String selection, String[] subjects){
