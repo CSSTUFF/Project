@@ -1,70 +1,26 @@
 import java.util.*;
-public class Operations_and_Algorithms {
-	public static void main(String[] args) {
-		Scanner con= new Scanner(System.in);
-		System.out.print("Would you like to see the concepts or the keyterms of this topic?");
-		String choice= con.nextLine();
-		if(choice.equals("concepts")==true){
-			keyConcepts();
-		}
-		else{
-			keyTerms();
-		}
-	}import java.util.*;
-public class Operations_and_Algorithms {
+public class Data_Structures {
 	//the "teacher made" key concepts of this java topic
-	public static void keyConcepts(){
+	public void keyConcepts(){
 		System.out.println("Concepts: ");
-		System.out.println("~ Operations on data structures");
-		System.out.println("~ Analysis of program efficiency");
+		System.out.println("~ Used to represent information within a program");
+		System.out.println("~ Abstraction");
 	}
 	//the "teacher made" key terms of this java topic
-	public static void keyTerms(){
+	public void keyTerms(){
 		System.out.println("Terms:");
-		System.out.println("~ Traversals:  going though each element in an sequence");
-		System.out.println("~ Insertions:  a way to sort an array by traversing "
-				+ "once");
-		System.out.println("~ Searching:  finding an item in the array that meets"
-				+ " some specified criterion");
-		System.out.println("~ Sequential:  it is accessed by a single thread; "
-				+ "a single thread can only do code in a specific order");
-		System.out.println("~ Binary:  one of the notations recognized"
-				+ " by old Java versions (octal, decimal, or hexadecimal)");
-		System.out.println("~ Sorting:  to put data in order; either"
-				+ " numerically or alphabetically");
-		System.out.println("~ Insertion: sortting data by only going through "
-				+ "one traversal");
-		System.out.println("~ Selection:  sorting algorithm, specifically"
-				+ " an in-place comparison sort");
-		System.out.println("~ Mergesort:  a general-purpose,"
-				+ " comparison-based sorting algorithm");
-	}
-	public Object[] subjects;
-}
-	public static void keyConcepts(){
-		System.out.println("Concepts: ");
-		System.out.println("~ Operations on data structures");
-		System.out.println("~ Analysis of program efficiency");
-	}
-	public static void keyTerms(){
-		System.out.println("Terms:");
-		System.out.println("~ Traversals:  going though each element in an sequence");
-		System.out.println("~ Insertions:  a way to sort an array by traversing "
-				+ "once");
-		System.out.println("~ Searching:  finding an item in the array that meets"
-				+ " some specified criterion");
-		System.out.println("~ Sequential:  it is accessed by a single thread; "
-				+ "a single thread can only do code in a specific order");
-		System.out.println("~ Binary:  one of the notations recognized"
-				+ " by old Java versions (octal, decimal, or hexadecimal)");
-		System.out.println("~ Sorting:  to put data in order; either"
-				+ " numerically or alphabetically");
-		System.out.println("~ Insertion: sortting data by only going through "
-				+ "one traversal");
-		System.out.println("~ Selection:  sorting algorithm, specifically"
-				+ " an in-place comparison sort");
-		System.out.println("~ Mergesort:  a general-purpose,"
-				+ " comparison-based sorting algorithm");
+		System.out.println("~ Primitive data types:  int, boolean, double");
+		System.out.println("~ Strings:  ");
+		System.out.println("~ Classes:  a blueprint or a template for making"
+				+ " different objects which defines its properties and behaviors."
+				+ " They can have feilds and methods to describe the behavior"
+				+ " of an object");
+		System.out.println("~ Lists:  a sequence of elements, where the user has"
+				+ " control over where each element is inserted in the list and "
+				+ "can access then by their indexes");
+		System.out.println("~ Arrays(1-dimensional):  a list of like-typed variables");
+		System.out.println("~ Arrays(2-dimensional):  they are stored as"
+				+ " an array of arrays, and can be used as a spread sheet");
 	}
 	public Object[] subjects;
 }
