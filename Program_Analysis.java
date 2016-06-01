@@ -1,17 +1,7 @@
 import java.util.*;
 public class Program_Analysis {
-	public static void main(String[] args) {
-		Scanner con= new Scanner(System.in);
-		System.out.print("Would you like to see the concepts or the keyterms of this topic?");
-		String choice= con.nextLine();
-		if(choice.equals("concepts")==true){
-			keyConcepts();
-		}
-		else{
-			keyTerms();
-		}
-	}
-	public static void keyConcepts(){
+	//the "teacher made" key concepts of this java topic
+	public void keyConcepts(){
 		System.out.println("Concepts: ");
 		System.out.println("~ Examining and testing programs to determine"
 				+ " if they correctly meet their specifications");
@@ -20,7 +10,8 @@ public class Program_Analysis {
 				+ " applied to different data sets");
 		System.out.println("~ Error identification and correction");
 	}
-	public static void keyTerms(){
+	//the "teacher made" key terms of this java topic
+	public void keyTerms(){
 		System.out.println("Terms:");
 		System.out.println("Unit testing:   a software testing method"
 				+ " by which individual units of source code");
