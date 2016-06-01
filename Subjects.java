@@ -5,7 +5,7 @@ public class Subjects{
 	public static void main(String[] args) throws IOException {
 		String[] subjects={"implementation","data structures",
 			"operations and algorithms","program analysis"};
-		ReviewGame game=new ReviewGame();
+		TeacherReviewGame game=new TeacherReviewGame();
 		Scanner con= new Scanner(System.in);
 		System.out.print("Would you like to look at notes or play a review game?"+
 				"(type notes or review)");
