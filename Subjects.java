@@ -1,8 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
-
-
 public class Subjects{
+	/*asks whether the user wants to play a review game or look at "teacher made" notes*/
 	public static void main(String[] args) throws IOException {
 		String[] subjects={"implementation","data structures",
 			"operations and algorithms","program analysis"};
@@ -11,6 +10,7 @@ public class Subjects{
 		System.out.print("Would you like to look at notes or play a review game?"+
 				"(type notes or review)");
 		String selection=con.next();
+		//goes to notes
 		if(selection.toLowerCase().contains("note")==true){
 			System.out.print("Which topic would you like to study? "
 				+ "\nImplementation, Data Structures, "
@@ -18,15 +18,13 @@ public class Subjects{
 			String topic=con.next();
 			chooser(topic,subjects);
 		}
+		//goes to game(s)
 		else{
-			int gameType=game.intro();
-			if(gameType==0){
-				/*System.out.println("Your score is: "+*/game.multiplechoice(con)/*)*/;
-			}/*else{
-				System.out.println("Your score is: "+game.shortanswer(con));
-			}*/
+			game.multiplechoice(con);
 		}
 	}
+	//Opens the "teacher made" notes the user chooses,
+	//and to key terms or topic concepts of the topic
 	public static void chooser(String selection, String[] subjects){
 		Implementation implementation = new Implementation();
 		Data_Structures data_structures = new Data_Structures();
@@ -36,7 +34,7 @@ public class Subjects{
 		Scanner con= new Scanner(System.in);
 		String choice="";
 		if(subjects[0].contains(selection)){
-			System.out.print("Would you like to see the concepts or the keyterms of this topic?");
+			System.out.print("Would you like to see the concepts or the key terms of this topic?");
 			choice= con.nextLine().toLowerCase();
 			if(choice.equals("concepts")==true){
 				implementation.keyConcepts();
@@ -45,7 +43,7 @@ public class Subjects{
 				implementation.keyTerms();
 			}
 		}else if(subjects[1].contains(selection)){
-			System.out.print("Would you like to see the concepts or the keyterms of this topic?");
+			System.out.print("Would you like to see the concepts or the key terms of this topic?");
 			choice= con.nextLine().toLowerCase();
 			if(choice.equals("concepts")==true){
 				data_structures.keyConcepts();
@@ -54,7 +52,7 @@ public class Subjects{
 				data_structures.keyTerms();
 			}
 		}else if(subjects[2].contains(selection)){
-			System.out.print("Would you like to see the concepts or the keyterms of this topic?");
+			System.out.print("Would you like to see the concepts or the key terms of this topic?");
 			choice= con.nextLine().toLowerCase();
 			if(choice.equals("concepts")==true){
 				operations_and_algorithms.keyConcepts();
@@ -63,7 +61,7 @@ public class Subjects{
 				operations_and_algorithms.keyTerms();
 			}
 		}else if(subjects[3].contains(selection)){
-			System.out.print("Would you like to see the concepts or the keyterms of this topic?");
+			System.out.print("Would you like to see the concepts or the key terms of this topic?");
 			choice= con.nextLine().toLowerCase();
 			if(choice.equals("concepts")==true){
 				program_analysis.keyConcepts();
