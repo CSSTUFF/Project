@@ -1,19 +1,11 @@
 import java.util.*;
 import java.io.IOException;
 public class ReviewGame{
-	public int intro(){
-		Scanner con= new Scanner(System.in);
-		System.out.println("Which review game would you like to play? "
-				+ "\n1: multiple choice \n2: short answer");
-		String game=con.next().toLowerCase();
-		 int num=0;
-		if(game.contains("short answer")){
-			num=1;
-		}
-		return num;
-	}
+	//Takes user to a practice site to practice multiple choice questions, 
+	//or go to google with a searched for practice problems where they can use a 
+	//different site too
 	public void multiplechoice(Scanner con) throws IOException{
-		/* questions from: */
+		/* questions from: http://www.indiabix.com/java-programming/questions-and-answers/*/
 		String[] questionTypes={"Operators and Assignments", "Java.lang Class", "Exceptions",
 				"Declarations and Access Control", "Inner Classes", "Language Fundamentals"};
 		String[] urls={"http://www.indiabix.com/java-programming/operators-and-assignments/",
